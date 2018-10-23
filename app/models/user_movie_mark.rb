@@ -1,0 +1,2 @@
+class UserMovieMark < ApplicationRecord
+end
