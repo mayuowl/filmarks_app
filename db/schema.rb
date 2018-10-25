@@ -10,16 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_23_142419) do
+ActiveRecord::Schema.define(version: 2018_10_24_050558) do
 
   create_table "movies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["title"], name: "index_movies_on_title"
+  end
+
+  create_table "user_movie_clips", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "movie_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["movie_id"], name: "index_user_movie_clips_on_movie_id"
+    t.index ["user_id"], name: "index_user_movie_clips_on_user_id"
   end
 
   create_table "user_movie_marks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "movie_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["movie_id"], name: "index_user_movie_marks_on_movie_id"
     t.index ["user_id"], name: "index_user_movie_marks_on_user_id"
   end
