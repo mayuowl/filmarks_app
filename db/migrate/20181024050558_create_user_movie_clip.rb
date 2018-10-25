@@ -3,6 +3,7 @@ class CreateUserMovieClip < ActiveRecord::Migration[5.2]
     create_table :user_movie_clips do |t|
       t.references :user
       t.references :movie
+      t.timestamps
     end
   end
 end

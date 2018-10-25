@@ -1,37 +1,37 @@
-source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+source "https://rubygems.org"
+git_source(:github) {|repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.1'
+ruby "2.5.1"
 
-gem 'rails', '~> 5.2.1'
-gem 'mysql2', '>= 0.4.4', '< 0.6.0'
-gem 'puma', '~> 3.11'
-gem 'webpacker'
+gem "mysql2", ">= 0.4.4", "< 0.6.0"
+gem "puma", "~> 3.11"
+gem "rails", "~> 5.2.1"
+gem "webpacker"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'bootsnap', '>= 1.1.0', require: false
-gem 'enumerize'
+gem "bootsnap", ">= 1.1.0", require: false
+gem "enumerize"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'pry-byebug'
-  gem 'pry-rails'
-  gem 'rspec-rails', '~> 3.8'
+  gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "pry-byebug"
+  gem "pry-rails"
+  gem "rspec-rails", "~> 3.8"
 end
 
 group :development do
-  gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'annotate'
-  gem 'rails-erd'
+  gem "annotate"
+  gem "listen", ">= 3.0.5", "< 3.2"
   gem "onkcop", require: false
+  gem "rails-erd"
+  gem "spring"
+  gem "spring-watcher-listen", "~> 2.0.0"
 end
 
 group :test do
@@ -40,4 +40,4 @@ group :test do
   gem "faker"
 end
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
