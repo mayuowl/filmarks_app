@@ -11,11 +11,14 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_10_27_023424) do
 =======
 <<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_10_27_022103) do
 =======
+=======
+>>>>>>> change db/schema.rb
 ActiveRecord::Schema.define(version: 2018_10_27_024437) do
 
   create_table "casts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -23,8 +26,11 @@ ActiveRecord::Schema.define(version: 2018_10_27_024437) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+<<<<<<< HEAD
 >>>>>>> change cast model and migration
 >>>>>>> change cast model and migration
+=======
+>>>>>>> change db/schema.rb
 
   create_table "movies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
