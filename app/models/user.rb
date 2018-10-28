@@ -15,7 +15,7 @@ class User < ApplicationRecord
   validates :account, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
   has_many :user_movie_marks, dependent: :destroy
-  has_many :users, through: :user_movie_marks
+  has_many :movies, through: :user_movie_marks
   has_many :user_review_likes, dependent: :destroy
   has_many :reviews, through: :user_review_likes
 end
