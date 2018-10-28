@@ -10,12 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_28_110415) do
+ActiveRecord::Schema.define(version: 2018_10_28_131259) do
 
   create_table "casts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "movie_actors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "movie_id"
+    t.bigint "cast_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cast_id"], name: "index_movie_actors_on_cast_id"
+    t.index ["movie_id"], name: "index_movie_actors_on_movie_id"
   end
 
   create_table "movie_directors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
