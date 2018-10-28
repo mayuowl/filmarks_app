@@ -10,4 +10,6 @@
 #
 
 class Review < ApplicationRecord
+  has_many :user_review_likes, dependent: :destroy
+  has_many :users, through: :user_review_likes
 end
