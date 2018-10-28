@@ -10,4 +10,8 @@
 
 class Cast < ApplicationRecord
   validates :name, presence: true
+  has_many :movie_directors, dependent: :destroy
+  has_many :movies, through: :movie_directors
+  has_many :movie_actors, dependent: :destroy
+  has_many :movies, through: :movie_actors
 end
