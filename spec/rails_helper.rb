@@ -12,7 +12,7 @@ DatabaseCleaner.strategy = :truncation
 Faker::Config.locale = :en
 
 RSpec.configure do |config|
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
 
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = true
