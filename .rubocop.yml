@@ -8,3 +8,11 @@ inherit_gem:
 
 AllCops:
   TargetRubyVersion: 2.5
+
+RSpec/NestedGroups:
+  Exclude:
+    - "spec/**/*.rb"
+
+RSpec/ExampleLength:
+  Exclude:
+    - "spec/requests/**/*.rb"
