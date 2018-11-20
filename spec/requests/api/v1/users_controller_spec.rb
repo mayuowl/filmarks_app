@@ -1,7 +1,7 @@
 require "rails_helper"
-describe UsersController, type: :request do
+describe Api::V1::UsersController, type: :request do
   describe "index" do
-    subject { get(users_path) }
+    subject { get(api_v1_users_path) }
 
     context "there are some data" do
       let!(:user) { create(:user) }

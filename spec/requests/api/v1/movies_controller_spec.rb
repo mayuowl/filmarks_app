@@ -1,7 +1,7 @@
 require "rails_helper"
-describe MoviesController, type: :request do
+describe Api::V1::MoviesController, type: :request do
   describe "index" do
-    subject { get(movies_path) }
+    subject { get(api_v1_movies_path) }
 
     context "there are some data" do
       let!(:movie) { create(:movie) }
@@ -22,7 +22,7 @@ describe MoviesController, type: :request do
   end
 
   describe "show" do
-    subject { get(movie_path(movie.id)) }
+    subject { get(api_v1_movie_path(movie.id)) }
 
     context "there are some data" do
       let(:movie) { create(:movie) }
