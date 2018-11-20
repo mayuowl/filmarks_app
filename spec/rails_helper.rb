@@ -1,12 +1,12 @@
-ENV['RAILS_ENV'] ||= 'test'
+ENV["RAILS_ENV"] ||= "test"
 
-require File.expand_path('../../config/environment', __FILE__)
-require 'spec_helper'
-require 'rspec/rails'
-require 'database_cleaner'
+require File.expand_path("../config/environment", __dir__)
+require "spec_helper"
+require "rspec/rails"
+require "database_cleaner"
 
 abort("The Rails environment is running in production mode!") if Rails.env.production?
-Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f }
 ActiveRecord::Migration.maintain_test_schema!
 DatabaseCleaner.strategy = :truncation
 Faker::Config.locale = :en
