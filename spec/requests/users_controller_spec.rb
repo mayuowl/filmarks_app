@@ -1,8 +1,9 @@
 require "rails_helper"
 describe UsersController, type: :request do
   describe "index" do
-    subject { get(users_path) } 
-    context do
+    subject { get(users_path) }
+
+    context "there are some data" do
       let!(:user) { create(:user) }
       before { create_list(:user, 2) }
 
