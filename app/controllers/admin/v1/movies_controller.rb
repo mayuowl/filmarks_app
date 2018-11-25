@@ -1,6 +1,5 @@
 class Admin::V1::MoviesController < ApplicationController
   def create
-    binding.pry
     @movie = Movie.create!(movie_params)
     render json: { status: 204, data: {} }
   end
