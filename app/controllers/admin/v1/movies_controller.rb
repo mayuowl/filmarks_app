@@ -5,6 +5,9 @@ class Admin::V1::MoviesController < ApplicationController
   end
 
   def update
+    @movie = Movie.find(params[:id])
+    @movie.update!(movie_params)
+    render json: { status: 200, data: @movie }
   end
 
   def destroy
@@ -15,5 +18,4 @@ class Admin::V1::MoviesController < ApplicationController
     def movie_params
       params.require(:movie).permit(:title)
     end
-
 end
