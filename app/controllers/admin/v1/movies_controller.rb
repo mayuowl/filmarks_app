@@ -11,6 +11,9 @@ class Admin::V1::MoviesController < ApplicationController
   end
 
   def destroy
+    @movie = Movie.find(params[:id])
+    @movie.destroy!(movie_params)
+    render json: { status: 204, data: @movie }
   end
 
   private
