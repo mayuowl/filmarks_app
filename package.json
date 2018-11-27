@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "@rails/webpacker": "3.5",
+    "ts-loader": "3.5.0",
+    "typescript": "^3.1.6",
     "vue": "^2.5.17",
     "vue-loader": "14.2.2",
     "vue-template-compiler": "^2.5.17"
