@@ -39,4 +39,20 @@ describe Admin::V1::MoviesController, type: :request do
       end
     end
   end
+
+  describe "destroy" do
+    subject { delete(admin_v1_movie_path(movie.id)) }
+
+    context "the data" do
+      let!(:movie) { create(:movie) }
+
+      it do
+        aggregate_failures do
+          expect { subject }.to change { Movie.count }.by(-1)
+          json = JSON.parse(response.body)
+          expect(json["status"]).to eq 204
+        end
+      end
+    end
+  end
 end
