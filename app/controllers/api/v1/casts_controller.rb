@@ -1,4 +1,4 @@
-class CastsController < ApplicationController
+class Api::V1::CastsController < ApplicationController
   def index
     @casts = Cast.all
   end
