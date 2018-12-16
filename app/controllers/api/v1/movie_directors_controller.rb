@@ -4,6 +4,6 @@ class Api::V1::MovieDirectors < ApplicationController
   end
 
   def show
-    @director = MovieDirector.find(params["id"])
+    @director = MovieDirector.find(params[:id])
   end
 end

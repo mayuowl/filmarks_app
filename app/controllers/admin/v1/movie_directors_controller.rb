@@ -2,7 +2,7 @@ class Admin::V1::MovieDirectorsController < ApplicationController
   before_action :set_director, only: [:update, :destroy]
 
   def create
-    @director = MovieDirector.create!
+    @director = MovieDirector.create(params[:movie_director])
   end
 
   def update
