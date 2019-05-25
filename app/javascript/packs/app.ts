@@ -35,10 +35,12 @@
 
 import Vue from 'vue/dist/vue.esm'
 import Header from './components/header.vue'
+import Router from './router/router'
 
 document.addEventListener('DOMContentLoaded', () => {
   new Vue({
     el: '#app',
+    router: Router,
     components: {
       'navbar': Header,
     }
