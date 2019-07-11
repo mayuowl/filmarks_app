@@ -11,11 +11,10 @@
 #
 default: &default
   adapter: mysql2
-  encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: 127.0.0.1
   username: root
-  password:
-  socket: /tmp/mysql.sock
+  password: root
 
 development:
   <<: *default
@@ -50,5 +49,3 @@ test:
 production:
   <<: *default
   database: filmarks_app_production
-  username: filmarks_app
-  password: <%= ENV['FILMARKS_APP_DATABASE_PASSWORD'] %>
